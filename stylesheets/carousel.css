@@ -1,0 +1,26 @@
+.carousel {
+  display: block;
+  text-align: center;
+  margin: 25px auto;
+}
+
+.carousel-inner {
+  display: inline-block;
+  height: auto;
+  max-height: 100px;
+  max-width: 350px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.t-comment {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.t-name {
+  font-weight: bold;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}

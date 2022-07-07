@@ -1,0 +1,921 @@
+
+html {
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'arial';
+  /* background: url('faq-background.jpg') no-repeat center center fixed; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: bottom;
+}
+.affix {
+  top: 0;
+  width: 100%;
+  /* z-index: 9999 !important; */
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.affix~.container-fluid {
+  position: relative;
+  top: 50px;
+}
+.container {
+  margin: 0 auto;
+}
+
+body a {
+  color: #0e68a8;
+}
+body a:hover {
+  text-decoration: none;
+}
+body h2 {
+  font-size: 1em;
+    padding: 20px 0;
+}
+body h3 {
+  font-size: .9em;
+}
+body h4 {
+  font-size: .8em;
+}
+body p {
+  font-size: 12px;
+}
+header {
+  background-color: white;
+  position: relative;
+  z-index: 101;
+  width: 75cw;
+}
+.header-wrapper {
+  display: inline-block;
+  border-bottom: 1px solid #d9d9d6;
+  padding: 20px 0;
+  width: 100%;
+}
+.header-wrapper #LennarLogo_header {
+  display: block;
+  text-align: center;
+}
+.header-wrapper #LennarText_header {
+  display: inline-block;
+  float: right;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.header-wrapper #LennarLogo_header img#full-logo {
+  width: 150px;
+}
+.header-wrapper #LennarLogo_header img#mini-logo {
+  display: none;
+  width: 30px;
+}
+.header-wrapper #LennarLogo_header img {
+  width: 18%;
+}
+.header-wrapper #LennarText_header ul {
+  display: inline-block;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.header-wrapper #LennarText_header ul li {
+  display: inline;
+  list-style: none;
+  padding: 0;
+}
+.header-wrapper #LennarText_header ul li a {
+  color: black;
+  font-size: 13px;
+  transition: 0.5s;
+}
+body .businessLogin {
+}
+
+body .businessLogin p {
+  margin: 0;
+  font-family: Raleway, 'sans-serif';
+  font-size: 12px;
+  font-weight: bold;
+}
+
+body .businessLogin a {
+  color: #347c6b !important;
+  transition: 0.3s;
+}
+.header-wrapper #LennarText_header a {
+  display: inline;
+  font-size: 12px;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.header-wrapper #LennarText_header a,
+.header-wrapper #LennarText_header a:after,
+.header-wrapper #LennarText_header a:before {
+  transition: all .5s;
+}
+
+.header-wrapper #LennarText_header a:hover {
+  color: #555;
+}
+
+/* stroke */
+.header-wrapper #LennarText_header a {
+  position: relative;
+}
+
+.header-wrapper #LennarText_header a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+
+.header-wrapper #LennarText_header a:hover:after {
+  width: 100%;
+}
+
+/* FAQ */
+body > .content {
+ height: 100vh;
+}
+#Navigation {
+  height: 100%;
+  overflow: hidden;
+}
+#Navigation #List {
+  color: white;
+  display: inline-block;
+  height: 100%;
+  padding: 25px;
+  width: 100%;
+  /* z-index: 1; */
+}
+#Navigation .stickyList {
+  left: 0;
+  position: absolute;
+  height: 100%;
+  z-index: 100;
+  padding: 0;
+  background: #fff;
+  /* background: #2c938f; */
+}
+#Navigation .stickyList::after {
+ content: "";
+ background: url(../img/faq-background.jpg);
+ background-attachment: fixed;
+ -webkit-background-size: contain;
+ -moz-background-size: contain;
+ -o-background-size: contain;
+ background-size: contain;
+ /* background-position: right bottom; */
+ background-repeat: no-repeat;
+ position: fixed;
+ opacity: 0.5;
+ top: 0;
+ right: 0;
+ bottom: 0;
+ left: 0;
+ z-index: -1;
+ opacity: 0.4;
+ /* -moz-transform: scaleX(-1);
+-o-transform: scaleX(-1);
+-webkit-transform: scaleX(-1);
+transform: scaleX(-1);
+filter: FlipH;
+-ms-filter: "FlipH"; */
+}
+#Navigation.scrolled .stickyList {
+  bottom: 0;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+#Navigation #List .fullList {
+  background: rgba(0, 0, 0, 0.5);
+  display: block;
+  font-size: 12px;
+  padding: 15%;
+  margin: 25% auto;
+  text-align: center;
+}
+#Navigation #List #store-info {
+  color: black;
+  text-transform: uppercase;
+  font-size: 12px;
+  display: block;
+  padding: 25px 0;
+  position: fixed;
+  left: 5vw;
+  bottom: 5vw;
+  z-index: -1;
+}
+#Navigation #List #store-info p {
+  padding: 0;
+  margin: 0;
+}
+#Navigation #List .fullList > nav {
+  display: inline-block;
+  word-break: break-word;
+}
+
+#Navigation #List .fullList a {
+  color: white;
+  display: block;
+  font-family: Raleway, 'sans-serif';
+  padding: 15px;
+  text-align: left;
+  text-transform: uppercase;
+}
+#Navigation #List .fullList a:hover,
+#Navigation #List .fullList a.active {
+  background: rgba(255, 255, 255, 0.3);
+}
+#Navigation > .row > :nth-child(2) {
+  background-color: white;
+  overflow-y: visible;
+  position: absolute;
+  right: 0;
+  z-index: 100;
+}
+#rightSide {
+  width: 100%;
+}
+#rightSide > a#closeScroll {
+  display: none;
+}
+#Navigation #listItems {
+  padding: 5%;
+  width: 100%;
+}
+#Navigation #List h2 {
+  padding-top: 0;
+}
+/* Accordion */
+#Navigation #listItems h2 {
+  display: inline-block;
+  font-family: Raleway, 'sans-serif';
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 45px;
+  text-transform: uppercase;
+}
+#Navigation #listItems .AnswQues > .container{
+  margin: 0;
+}
+#Navigation #listItems .AnswQues > .container > p {
+  border-left: 1px solid black;
+  display: inline-block;
+  padding: 9px;
+}
+#Navigation .card {
+  border: none;
+  text-align: left;
+}
+#Navigation .card .card-header {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+#Navigation .card .card-body {
+  padding: 5px 40px 10px;
+}
+#Navigation .card h5 button {
+  color: black;
+  padding-left: 0;
+  text-align: left;
+  text-decoration: none;
+  width: 100%;
+}
+#Navigation .card h5 button:hover {
+  text-decoration: none;
+}
+#Navigation .card h5 i {
+  font-size: 12px;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+#Navigation h3 {
+  padding: 15px 0 0;
+}
+#Navigation .card p {
+  font-size: 14px;
+  margin: 0;
+}
+#Navigation .card a {
+  font-weight: bold;
+  display: inline-block;
+  padding: 0;
+}
+#Navigation .card ol,
+#Navigation .card ul {
+  margin: 0;
+}
+#Navigation .card li {
+  font-size: 14px;
+}
+#Navigation .card li > ul li,
+#Navigation .card li > ol li,
+#Navigation .card .card-body > li {
+  color: #53565a;
+  font-size: 12px;
+  list-style-type: square;
+  text-transform: italic;
+}
+#Navigation #collapseThirteen ul,
+#Navigation #collapseSeventeen ul
+ {
+  padding-left: 0px;
+}
+#Navigation #collapseThirteen li,
+#Navigation #collapseSeventeen li
+ {
+  list-style: none;
+}
+[data-toggle="collapse"] .fa:before {
+  content: "\f068";
+  transition: 0.2s;
+}
+[data-toggle="collapse"].collapsed .fa:before {
+  content: "\f067";
+  transition: 0.2s;
+}
+#Navigation #accordion {
+  border-bottom: 1px solid #d9d9d6;
+  padding-bottom: 15px;
+}
+#Navigation .content {
+  text-align: center;
+}
+#Navigation .content p {
+  font-weight: bold;
+  padding: 0 0 10px;
+}
+/* Printing Checklist */
+body .printingChecklist {
+  padding-left: 1%;
+}
+
+body .printingChecklist>div {
+  margin: 0 0 -10px;
+  text-align: center;
+}
+
+body .printingChecklist #imprintUpload h6#printingQ {
+  margin-bottom: -15px;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+body .printingChecklist h6#printingQ {
+  background: white;
+  border: 1px solid white;
+  display: inline-block;
+  padding: 3px 7px;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+body #printStandardsPDF {
+  display: inline-block;
+  text-align: center;
+}
+
+body #printStandardsPDF a {
+  border: 1px solid #aaa;
+  color: #2c938f;
+  display: block;
+  font-size: 12px;
+  padding: 15px !important;
+  font-weight: 600;
+  margin: 0 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+body #printStandardsPDF a,
+body #printStandardsPDF a:after,
+body #printStandardsPDF a:before {
+  transition: all .5s;
+}
+
+body #printStandardsPDF a:hover {
+  color: #555;
+}
+
+body #printStandardsPDF a {
+  position: relative;
+  text-decoration: none;
+  transition: all 2s;
+}
+
+body #printStandardsPDF a:after {
+  background: #2c938f;
+  color: transparent;
+  content: '.';
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+}
+
+body #printStandardsPDF a:after {
+  content: '.';
+  margin: 0;
+  opacity: 0;
+  text-align: left;
+}
+
+body #printStandardsPDF a:hover {
+  color: #fff;
+  z-index: 1;
+  border: 1px solid #2c938f;
+}
+
+body #printStandardsPDF a:hover:after {
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+  z-index: -10;
+}
+
+/* Contact Us */
+#contact {
+  float: right;
+  width: 100%;
+  z-index: 2;
+}
+#contact h2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#contact h3 {
+  margin: 0 0 0px;
+}
+#contact p {
+  line-height: 15px;
+  margin-bottom: 0;
+}
+#contact h4 {}
+#contact .content {
+  width: 100%;
+}
+#contact .content iframe {
+  margin: 0 auto;
+  width: 100%;
+}
+#contact .content #contactus-bckgrnd {
+  /* background: url('contactus-background.jpg') no-repeat center center fixed; */
+  background-color: white;
+  /* -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  background-position: center; */
+  margin-top: -1%;
+}
+#contact .content .container {
+  padding: 3% 0 5%;
+}
+#contact .content {text-align: center;}
+#contact .content .contact-info {
+  padding: 5% 0;
+}
+#contact .content #contact-info-box {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid #d9d9d6;
+  padding: 25px 15px;
+  margin: 10px 25px 25px;
+}
+#contact .content .contact-info > p {
+  padding-bottom: 25px;
+}
+#contact .content .contact-info > p:nth-child(4) {
+  font-weight: bold;
+}
+body #start-order {
+  display: inline-block;
+  padding-top: 2%;
+}
+body #start-order a {
+  background: rgba(00, 00, 00, 0.4);
+  border: 1px solid #aaa;
+  color: #2c938f;
+  display: block;
+  font-size: 12px;
+  /* padding: 15px; */
+  font-weight: 600;
+  /* margin: 0 10px; */
+  text-decoration: none;
+  text-transform: uppercase;
+  min-width: auto;
+  width: auto;
+  max-width: 300px;
+  text-align: center !important;
+}
+
+body #start-order a,
+body #start-order a:after,
+body #start-order a:before {
+  transition: all .5s;
+}
+
+body #start-order a:hover {
+  color: #555;
+}
+
+body #start-order a {
+  position: relative;
+  text-decoration: none;
+  transition: all 2s;
+}
+
+body #start-order a:after {
+  background: #2c938f;
+  color: transparent;
+  content: '.';
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+}
+
+body #start-order a:after {
+  content: '.';
+  margin: 0;
+  opacity: 0;
+  text-align: left;
+}
+
+body #start-order a:hover {
+  color: #fff;
+  z-index: 1;
+  border: 1px solid #2c938f;
+}
+
+body #start-order a:hover:after {
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+  z-index: -10;
+}
+
+/* Keyframes */
+@-webkit-keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #2c938f;
+  }
+}
+/* Popover Help */
+#popoverTip {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 30%;
+}
+#popoverTip .helpButton {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: rotate(-90deg);
+  z-index: 1;
+}
+#popoverTip .helpButton h5 {
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 7px 10px;
+  margin-top: 27px;
+}
+#popoverTip .top-hint {
+  background: #0e68a8;
+  padding: 15px;
+  position: relative;
+  height: 160px;
+  width: 200px;
+  z-index: 2;
+}
+#popoverTip .top-hint h5 {
+  display: inline-block;
+  font-family: Roboto, 'sans-serif';
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  margin: 0;
+  padding: 5px;
+  vertical-align: middle;
+}
+#popoverTip .top-hint h5 a {
+  color: white;
+}
+#popoverTip .top-hint p {
+  margin-bottom: 0;
+  color: white;
+  font-style: italic;
+  padding: 5px 0 0 5px;
+  opacity: 0.9;
+}
+/* Footer */
+#footer .footer {
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  background: linear-gradient(-45deg, #18916a, #0e68a8, #1593a0, #18916a, #0e68a8, #1593a0);
+  background-color: linear-gradient(-45deg, #18916a, #0e68a8, #1593a0, #18916a, #0e68a8, #1593a0);
+  background-size: 800% 800%;
+  -webkit-animation: LennarBlueGradient 45s ease infinite;
+  -moz-animation: LennarBlueGradient 45s ease infinite;
+  animation: LennarBlueGradient 45s ease infinite;
+  transition: 1s;
+  z-index: 2;
+}
+@-webkit-keyframes LennarBlueGradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+@-moz-keyframes LennarBlueGradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+@keyframes LennarBlueGradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+#footer h4 {
+  margin: 0;
+  letter-spacing: .5px;
+}
+#footer p {
+  font-size: 11px;
+  line-height: 15px;
+  margin: 0;
+}
+#footer #backtotop {
+  bottom: 4%;
+  position: fixed;
+  right: 0;
+  z-index: 100;
+}
+#footer #backtotop a {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 1px 0px 15px rgba(0, 0, 0, 0.3);
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 5px 15px;
+  opacity: 0.5;
+  transition: 0.2s;
+}
+#footer #backtotop a:hover {
+  opacity: 1;
+}
+
+/* Characters */
+.characters {
+  pointer-events: none;
+}
+.characters span {
+  z-index: 101;
+}
+.characters img {
+  width: 85px;
+  z-index: 101;
+}
+.characters #peakaBoo {
+  position: fixed;
+  left: 0;
+  top: 100px;
+}
+.characters #peakaBoo img {
+  position: absolute;
+  width: 75px;
+}
+.characters #arryPeakaBoo {
+  top: 130px;
+}
+.characters #lennyPeakaBoo {
+  top: 270px;
+}
+.characters #nerd {}
+.characters #nerd img {
+  width: 85px;
+}
+.characters #lennyNerd {
+  left: 20%;
+  position: fixed;
+  top: 120px;
+}
+.characters #arryNerd {
+  top: 600px;
+  position: fixed;
+}
+#arryDrink,
+#lennyMagic {
+  pointer-events: none;
+  position: absolute;
+  width: 75px;
+  margin-left: -210px;
+  margin-top: -40px;
+}
+
+/* Media Query */
+@media only screen and (max-width: 1702px) {
+
+}
+
+@media only screen and (max-width: 1550px) {
+  .characters #peakaBoo img {
+    width: 65px;
+  }
+  .characters #nerd img {
+    width: 70px;
+  }
+  .characters #lennyPeakaBoo {
+    top: 230px;
+  }
+}
+@media only screen and (max-width: 1330px) {
+  .characters #lennyNerd {
+    top: 120px;
+  }
+  #arryDrink,
+  #lennyMagic {
+    margin-left: -176px;
+  }
+}
+
+@media only screen and (max-width: 1215px) {
+  .characters #lennyPeakaBoo {
+    top: 215px;
+  }
+  .characters #arryNerd {
+    top: 580px;
+  }
+  .characters #peakaBoo img {
+    width: 50px;
+  }
+  .characters #nerd img {
+    width: 60px;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .header-wrapper #LennarLogo_header img#full-logo {
+    display: none;
+  }
+  .header-wrapper #LennarLogo_header img#mini-logo {
+    display: inline-block;
+  }
+  #Navigation #List .fullList > nav {
+    width: 100%;
+  }
+
+}
+@media only screen and (max-width: 991px) {
+  #arryDrink,
+  #lennyMagic {
+  width: 50px;
+  }
+  #arryDrink {
+    margin-left: 0;
+    right: -10px;
+    bottom: -20px;
+  }
+  #lennyMagic {
+    margin-left: -10px;
+    left: 0;
+  }
+  .characters #peakaBoo img {
+    width: 50px;
+  }
+  .characters #lennyPeakaBoo {
+    top: 230px;
+  }
+  .characters #lennyNerd {
+    left: unset;
+    right: 0;
+    top: 65px;
+  }
+  .characters #arryNerd {
+    top: 560px;
+  }
+  #rightSide a#closeScroll {
+    background: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    display: block;
+    padding: 15px;
+    position: fixed;
+    top: 85px;
+    z-index: 102;
+  }
+  #Navigation { }
+  #Navigation.scrolled {}
+  #Navigation .stickyList {
+    position: relative;
+    margin: 0 auto;
+  }
+  #Navigation > .row {  }
+  #Navigation.scrolled .stickyList {
+    position: relative;
+  }
+  #Navigation #rightSide > :nth-child(2) {
+    padding-left: 7%;
+  }
+  #Navigation > .row {
+    height: 100%;
+  }
+  #Navigation .row .mobileRight {
+    height: 100%;
+    overflow: scroll;
+    position: fixed;
+    right: -100%;
+    transition: 1s;
+    z-index: 101;
+  }
+  #Navigation .row .mobileRight#moveRight {
+    right: 0;
+  }
+  #Navigation #rightSide h2 {
+    padding-top: 15%;
+  }
+  #Navigation #List {}
+  #Navigation #List .fullList a:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+  }
+  #Navigation #List .fullList a.active {
+    background: inherit;
+  }
+  #Navigation #List .fullList {
+    padding: 5% 5% 5% 7%;
+    margin: 0 auto;
+    text-align: left;
+    /* transition: 1.5s; */
+  }
+  #contact .content iframe {
+    height: 40%;
+  }
+}
